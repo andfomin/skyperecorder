@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\Windows Kits\8.0\bin\x86\signtool.exe" sign /v /sha1 38ed205a2283a472ca2389d1705509465e07a0e5 /d "Englisharium Recorder for Skype" /du "http://englisharium.com/recorder-for-skype/" /t http://timestamp.verisign.com/scripts/timestamp.dll %1
+rem "C:\Program Files (x86)\Windows Kits\8.0\bin\x86\signtool.exe" sign /v /sha1 38ed205a2283a472ca2389d1705509465e07a0e5 /d "Englisharium Recorder for Skype" /du "http://englisharium.com/recorder-for-skype/" %1
+copy %1 %2 /Y

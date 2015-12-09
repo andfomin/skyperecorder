@@ -1,0 +1,31 @@
+﻿<Window x:Class="Recorder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Englisharium Recorder for Skype" Height="70" Width="270" Loaded="Window_Loaded" ResizeMode="NoResize" Icon="Recorder.ico" Closing="Window_Closing" >
+
+    <Window.Resources>
+        <Style x:Key="RoundButtonTemplate" TargetType="Button">
+            <Setter Property="Background" Value="#0B35C7"/>
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="16" Background="{TemplateBinding Background}" BorderThickness="3" BorderBrush="LightBlue">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Button x:Name="RecordButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                ClickMode="Press" Content="{Binding GetButtonText}" IsEnabled="{Binding GetButtonEnabled}"
+                Click="RecordButton_Click" Margin="5,5,42,5" FontSize="18" Foreground="{Binding GetButtonForegroundColor}">
+        </Button>
+        <Button Content="?" HorizontalAlignment="Right" VerticalAlignment="Center" Width="32" Height="32" Margin="5,5,5,5" Style="{StaticResource RoundButtonTemplate}" FontSize="18" FontWeight="Bold" 
+                Click="HelpButton_Click" ToolTip="Show help" />
+    </Grid>
+</Window>
